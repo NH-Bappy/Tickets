@@ -103,8 +103,8 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* Flowing Rainbow Ribbon Stream */}
-      <div className="absolute top-0 right-0 w-full h-[650px] pointer-events-none z-10 overflow-hidden">
+      {/* Continuous 7-Strip Rainbow Stream exiting precisely at X = 720 (60% from left) at Y = 700 */}
+      <div className="absolute top-0 left-0 w-full h-[660px] pointer-events-none z-10 overflow-hidden">
         <svg className="w-full h-full" viewBox="0 0 1200 680" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
             const yOff = band.offset;
@@ -117,8 +117,8 @@ export default function HeroSection({ onOpenTickets }) {
                   C ${260 + yOff} 115, ${80 + yOff} 210, ${210 + yOff} 285 
                   C ${340 + yOff} 355, ${790 + yOff} 235, ${930 + yOff} 325 
                   C ${1020 + yOff} 385, ${760 + yOff} 425, ${470 + yOff} 405 
-                  C ${240 + yOff} 385, ${540 + yOff} 530, ${750 + yOff} 495 
-                  C ${840 + yOff} 480, ${820 + yOff} 620, ${800 + yOff} 720
+                  C ${240 + yOff} 385, ${540 + yOff} 530, ${680 + yOff} 500 
+                  C ${740 + yOff} 480, ${720 + yOff} 600, ${720 + yOff} 720
                 `}
                 stroke={band.color}
                 strokeWidth="11"

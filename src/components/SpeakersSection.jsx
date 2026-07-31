@@ -35,7 +35,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
   return (
     <section id="speakers" className="relative w-full bg-[#F5F0E6] text-[#1e1e21] pt-0 pb-20 px-4 overflow-hidden select-none">
       
-      {/* Connected White Pipe Apparatus & Rainbow Stream System */}
+      {/* Connected Pipe Apparatus & Rainbow Stream System */}
       <div className="relative max-w-6xl mx-auto mb-12">
         
         {/* Steam overlay when valve is turned */}
@@ -52,39 +52,39 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
           </motion.div>
         )}
 
-        {/* SVG Connected Pipes and Seamless Rainbow Ribbon Connection */}
+        {/* SVG Connected Pipes and Perfect Seamless Rainbow Ribbon Connection */}
         <div className="relative w-full overflow-x-auto pb-4">
-          <svg className="w-full min-w-[780px] h-[360px]" viewBox="0 0 1000 360" fill="none">
+          <svg className="w-full min-w-[850px] h-[360px]" viewBox="0 0 1200 360" fill="none">
             
-            {/* SEAMLESS 7-STRIP RAINBOW RIBBON: Starts at top boundary (Y = -20) and flows directly into the Golden Funnel! */}
+            {/* SEAMLESS 7-STRIP RAINBOW RIBBON: Starts at X = 720 (matching Hero exit!) and flows straight into the Funnel */}
             <g className="z-10">
               {rainbowBands.map((band, i) => (
                 <path
                   key={i}
                   d={`
-                    M ${540 + band.offset} -30 
-                    C ${550 + band.offset} 30, ${570 + band.offset} 60, ${585 + band.offset * 0.4} 95
+                    M ${720 + band.offset} -30 
+                    C ${725 + band.offset} 20, ${735 + band.offset} 50, ${740 + band.offset * 0.4} 85
                   `}
                   stroke={band.color}
-                  strokeWidth="7"
+                  strokeWidth="8"
                   strokeLinecap="round"
                   fill="none"
                 />
               ))}
             </g>
 
-            {/* GOLDEN FUNNEL: Aligned exactly where the 7-strip rainbow ribbon pours into it */}
-            <g transform="translate(600, 95)" className="z-20">
+            {/* GOLDEN FUNNEL: Placed exactly at X = 750 (matching where the 7-strip rainbow ribbon streams down) */}
+            <g transform="translate(750, 85)" className="z-20">
               {/* Funnel Body */}
-              <polygon points="-30,0 30,0 14,35 -14,35" fill="#E6914D" stroke="#1e1e21" strokeWidth="2.5" />
-              {/* Stem connecting to pipe */}
-              <rect x="-6" y="35" width="12" height="35" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2" />
+              <polygon points="-32,0 32,0 15,35 -15,35" fill="#E6914D" stroke="#1e1e21" strokeWidth="2.5" />
+              {/* Stem connecting to top pipe */}
+              <rect x="-6" y="35" width="12" height="45" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2" />
             </g>
 
             {/* White Laboratory Pipes with Dark Stroke */}
-            {/* Left Pipe from Blue Mascot -> Valve -> Pressure Gauge -> Funnel -> Beaker */}
+            {/* Main Pipe running across */}
             <path 
-              d="M 50 140 L 450 140 L 450 240 L 820 240 L 820 140 L 950 140" 
+              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
               stroke="#1e1e21" 
               strokeWidth="14" 
               strokeLinecap="round" 
@@ -92,7 +92,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
               fill="none" 
             />
             <path 
-              d="M 50 140 L 450 140 L 450 240 L 820 240 L 820 140 L 950 140" 
+              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
               stroke="#FAF6EE" 
               strokeWidth="8" 
               strokeLinecap="round" 
@@ -102,7 +102,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
 
             {/* Glowing Liquid Stream Inside Pipe */}
             <path 
-              d="M 50 140 L 450 140 L 450 240 L 820 240 L 820 140 L 950 140" 
+              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
               stroke="#E6914D" 
               strokeWidth="3" 
               className="animate-liquid" 
@@ -110,7 +110,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             />
 
             {/* Pressure Gauge */}
-            <g transform="translate(450, 140)" className="cursor-pointer" onClick={handleValveClick}>
+            <g transform="translate(500, 160)" className="cursor-pointer" onClick={handleValveClick}>
               <circle cx="0" cy="-30" r="20" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="3" />
               <circle cx="0" cy="-30" r="16" fill="#FAF6EE" />
               <line 
@@ -125,7 +125,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Valve Wheel */}
-            <g transform="translate(250, 140)" className="cursor-pointer group" onClick={handleValveClick}>
+            <g transform="translate(280, 160)" className="cursor-pointer group" onClick={handleValveClick}>
               <circle cx="0" cy="0" r="16" fill="#F2C94C" stroke="#1e1e21" strokeWidth="3" className="group-hover:rotate-45 transition-transform" />
               <line x1="-12" y1="0" x2="12" y2="0" stroke="#1e1e21" strokeWidth="3" />
               <line x1="0" y1="-14" x2="0" y2="14" stroke="#1e1e21" strokeWidth="3" />
@@ -133,7 +133,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Distillation Beaker Vessel */}
-            <g transform="translate(820, 160)">
+            <g transform="translate(950, 180)">
               <path d="M-22 0 L22 0 L32 60 L-32 60 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="3" />
               <rect x="-8" y="-25" width="16" height="25" fill="#D9829C" stroke="#1e1e21" strokeWidth="2" />
               <circle cx="-8" cy="35" r="4" fill="#6BB2D5" className="animate-bubble-1" />
@@ -141,13 +141,13 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Dripping Liquid to Conveyor Belt */}
-            <path d="M 820 220 L 820 280" stroke="#6BB2D5" strokeWidth="4" strokeDasharray="6 6" className="animate-liquid" />
+            <path d="M 950 240 L 950 290" stroke="#6BB2D5" strokeWidth="4" strokeDasharray="6 6" className="animate-liquid" />
 
             {/* Conveyor Belt Platform */}
-            <rect x="50" y="290" width="900" height="16" rx="8" fill="#1e1e21" />
-            <circle cx="70" cy="298" r="5" fill="#FAF6EE" />
-            <circle cx="930" cy="298" r="5" fill="#FAF6EE" />
-            <circle cx="500" cy="298" r="5" fill="#FAF6EE" />
+            <rect x="50" y="300" width="1050" height="16" rx="8" fill="#1e1e21" />
+            <circle cx="70" cy="308" r="5" fill="#FAF6EE" />
+            <circle cx="1080" cy="308" r="5" fill="#FAF6EE" />
+            <circle cx="575" cy="308" r="5" fill="#FAF6EE" />
           </svg>
 
           {/* Conveyor Belt Jars */}
