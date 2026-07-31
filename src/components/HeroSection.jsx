@@ -14,12 +14,12 @@ export default function HeroSection({ onOpenTickets }) {
 
   const rainbowBands = [
     { color: '#8E7CC3', offset: 0 },   // Muted Purple
-    { color: '#6BB2D5', offset: 12 },  // Muted Sky Blue
-    { color: '#76B894', offset: 24 },  // Muted Sage Green
-    { color: '#F2C94C', offset: 36 },  // Muted Vintage Yellow
-    { color: '#E6914D', offset: 48 },  // Muted Soft Orange
-    { color: '#DE5B5B', offset: 60 },  // Muted Coral Red
-    { color: '#D9829C', offset: 72 }   // Muted Soft Pink
+    { color: '#6BB2D5', offset: 10 },  // Muted Sky Blue
+    { color: '#76B894', offset: 20 },  // Muted Sage Green
+    { color: '#F2C94C', offset: 30 },  // Muted Vintage Yellow
+    { color: '#E6914D', offset: 40 },  // Muted Soft Orange
+    { color: '#DE5B5B', offset: 50 },  // Muted Coral Red
+    { color: '#D9829C', offset: 60 }   // Muted Soft Pink
   ];
 
   const heroStars = [
@@ -36,9 +36,6 @@ export default function HeroSection({ onOpenTickets }) {
     { top: '50%', left: '28%', size: 'text-xs', color: 'text-white/40', icon: '✧', delay: '1.3s' },
     { top: '48%', right: '22%', size: 'text-xs', color: 'text-[#F2C94C]/80', icon: '✦', delay: '0.6s' },
     { top: '58%', right: '6%', size: 'text-sm', color: 'text-white/60', icon: '✦', delay: '1.4s' },
-    { top: '65%', left: '18%', size: 'text-sm', color: 'text-white/50', icon: '✧', delay: '0.3s' },
-    { top: '70%', left: '4%', size: 'text-xs', color: 'text-[#E6914D]/80', icon: '✦', delay: '1s' },
-    { top: '68%', right: '15%', size: 'text-base', color: 'text-[#F2C94C]/70', icon: '★', delay: '0.9s' },
   ];
 
   return (
@@ -103,8 +100,8 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* Continuous 7-Strip Rainbow Stream exiting precisely at X = 720 (60% from left) at Y = 700 */}
-      <div className="absolute top-0 left-0 w-full h-[660px] pointer-events-none z-10 overflow-hidden">
+      {/* Rainbow Ribbon Stream exiting into Cream section top left */}
+      <div className="absolute top-0 right-0 w-full h-[660px] pointer-events-none z-10 overflow-hidden">
         <svg className="w-full h-full" viewBox="0 0 1200 680" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
             const yOff = band.offset;
@@ -115,13 +112,12 @@ export default function HeroSection({ onOpenTickets }) {
                   M ${1350 + yOff} ${-100 + yOff} 
                   C ${1080 + yOff} 110, ${780 + yOff} 30, ${500 + yOff} 75 
                   C ${260 + yOff} 115, ${80 + yOff} 210, ${210 + yOff} 285 
-                  C ${340 + yOff} 355, ${790 + yOff} 235, ${930 + yOff} 325 
-                  C ${1020 + yOff} 385, ${760 + yOff} 425, ${470 + yOff} 405 
-                  C ${240 + yOff} 385, ${540 + yOff} 530, ${680 + yOff} 500 
-                  C ${740 + yOff} 480, ${720 + yOff} 600, ${720 + yOff} 720
+                  C ${340 + yOff} 355, ${790 + yOff} 235, ${920 + yOff} 325 
+                  C ${1020 + yOff} 385, ${760 + yOff} 425, ${420 + yOff} 405 
+                  C ${200 + yOff} 385, ${280 + yOff} 520, ${300 + yOff} 720
                 `}
                 stroke={band.color}
-                strokeWidth="11"
+                strokeWidth="10"
                 strokeLinecap="round"
                 fill="none"
               />

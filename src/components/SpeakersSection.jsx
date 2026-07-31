@@ -16,12 +16,12 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
 
   const rainbowBands = [
     { color: '#8E7CC3', offset: 0 },   // Muted Purple
-    { color: '#6BB2D5', offset: 8 },   // Muted Sky Blue
-    { color: '#76B894', offset: 16 },  // Muted Sage Green
-    { color: '#F2C94C', offset: 24 },  // Muted Vintage Yellow
-    { color: '#E6914D', offset: 32 },  // Muted Soft Orange
-    { color: '#DE5B5B', offset: 40 },  // Muted Coral Red
-    { color: '#D9829C', offset: 48 }   // Muted Soft Pink
+    { color: '#6BB2D5', offset: 7 },   // Muted Sky Blue
+    { color: '#76B894', offset: 14 },  // Muted Sage Green
+    { color: '#F2C94C', offset: 21 },  // Muted Vintage Yellow
+    { color: '#E6914D', offset: 28 },  // Muted Soft Orange
+    { color: '#DE5B5B', offset: 35 },  // Muted Coral Red
+    { color: '#D9829C', offset: 42 }   // Muted Soft Pink
   ];
 
   const jars = [
@@ -52,39 +52,77 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
           </motion.div>
         )}
 
-        {/* SVG Connected Pipes and Perfect Seamless Rainbow Ribbon Connection */}
+        {/* SVG Connected Pipes and Exact Horn Funnel Connection */}
         <div className="relative w-full overflow-x-auto pb-4">
-          <svg className="w-full min-w-[850px] h-[360px]" viewBox="0 0 1200 360" fill="none">
+          <svg className="w-full min-w-[850px] h-[380px]" viewBox="0 0 1200 380" fill="none">
             
-            {/* SEAMLESS 7-STRIP RAINBOW RIBBON: Starts at X = 720 (matching Hero exit!) and flows straight into the Funnel */}
+            {/* White Cloudpuff where Rainbow enters from the top dark section */}
+            <g transform="translate(230, -10)">
+              <path d="M10 25 Q30 5 50 18 Q70 5 90 20 Q110 10 115 35 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2.5" />
+              <circle cx="35" cy="30" r="14" fill="#FAF6EE" />
+              <circle cx="65" cy="30" r="18" fill="#FAF6EE" />
+              <circle cx="95" cy="32" r="12" fill="#FAF6EE" />
+            </g>
+
+            {/* CONTINUOUS 7-STRIP RAINBOW STREAM: 
+                Enters from top (X = 300), passes through Cloudpuff, 
+                curves horizontally right under top pipe loop, 
+                and streams straight into the Left Mouth of the Horizontal Horn Funnel! */}
             <g className="z-10">
               {rainbowBands.map((band, i) => (
                 <path
                   key={i}
                   d={`
-                    M ${720 + band.offset} -30 
-                    C ${725 + band.offset} 20, ${735 + band.offset} 50, ${740 + band.offset * 0.4} 85
+                    M ${280 + band.offset} -30 
+                    C ${295 + band.offset} 50, ${360 + band.offset} 100, ${520 + band.offset} 140 
+                    C ${640 + band.offset} 170, ${760 + band.offset * 0.4} 190, ${820} ${195 + band.offset * 0.5}
                   `}
                   stroke={band.color}
-                  strokeWidth="8"
+                  strokeWidth="7"
                   strokeLinecap="round"
                   fill="none"
                 />
               ))}
             </g>
 
-            {/* GOLDEN FUNNEL: Placed exactly at X = 750 (matching where the 7-strip rainbow ribbon streams down) */}
-            <g transform="translate(750, 85)" className="z-20">
-              {/* Funnel Body */}
-              <polygon points="-32,0 32,0 15,35 -15,35" fill="#E6914D" stroke="#1e1e21" strokeWidth="2.5" />
-              {/* Stem connecting to top pipe */}
-              <rect x="-6" y="35" width="12" height="45" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2" />
+            {/* HORIZONTAL GOLDEN HORN FUNNEL: Pointing Left with open mouth on the left side! */}
+            <g transform="translate(820, 160)" className="z-20">
+              {/* Golden Cone Mouth pointing Left */}
+              <polygon points="0,0 80,35 80,65 0,100" fill="#F2C94C" stroke="#1e1e21" strokeWidth="3" />
+              {/* Horn Rim Outline */}
+              <line x1="0" y1="0" x2="0" y2="100" stroke="#1e1e21" strokeWidth="4" />
+              {/* Back Ring connectors */}
+              <rect x="80" y="38" width="12" height="24" rx="2" fill="#E6914D" stroke="#1e1e21" strokeWidth="2" />
+              {/* Pipe connection leaving right side of Horn */}
+              <path d="M 92 50 L 1100 50" stroke="#1e1e21" strokeWidth="12" strokeLinecap="round" />
+              <path d="M 92 50 L 1100 50" stroke="#FAF6EE" strokeWidth="6" strokeLinecap="round" />
             </g>
 
-            {/* White Laboratory Pipes with Dark Stroke */}
-            {/* Main Pipe running across */}
+            {/* WHITE LABORATORY PIPES matching user's reference snippet layout */}
+            {/* Top Loop Pipe above Rainbow */}
             <path 
-              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
+              d="M 850 -20 L 850 50 C 850 90, 920 90, 920 40 C 920 0, 800 -10, 780 40 L 780 120" 
+              stroke="#1e1e21" 
+              strokeWidth="12" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              fill="none" 
+            />
+            <path 
+              d="M 850 -20 L 850 50 C 850 90, 920 90, 920 40 C 920 0, 800 -10, 780 40 L 780 120" 
+              stroke="#FAF6EE" 
+              strokeWidth="6" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              fill="none" 
+            />
+
+            {/* Leaves on Top Right Pipe */}
+            <path d="M 845 20 C 830 10, 825 25, 845 30 Z" fill="#76B894" stroke="#1e1e21" strokeWidth="2" />
+
+            {/* Main Connecting Pipe under Rainbow */}
+            <path 
+              d="M 50 180 L 480 180 L 480 260 L 980 260 L 980 180" 
               stroke="#1e1e21" 
               strokeWidth="14" 
               strokeLinecap="round" 
@@ -92,7 +130,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
               fill="none" 
             />
             <path 
-              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
+              d="M 50 180 L 480 180 L 480 260 L 980 260 L 980 180" 
               stroke="#FAF6EE" 
               strokeWidth="8" 
               strokeLinecap="round" 
@@ -100,9 +138,9 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
               fill="none" 
             />
 
-            {/* Glowing Liquid Stream Inside Pipe */}
+            {/* Glowing Liquid Stream Inside Main Pipe */}
             <path 
-              d="M 50 160 L 500 160 L 500 250 L 950 250 L 950 160 L 1100 160" 
+              d="M 50 180 L 480 180 L 480 260 L 980 260 L 980 180" 
               stroke="#E6914D" 
               strokeWidth="3" 
               className="animate-liquid" 
@@ -110,7 +148,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             />
 
             {/* Pressure Gauge */}
-            <g transform="translate(500, 160)" className="cursor-pointer" onClick={handleValveClick}>
+            <g transform="translate(480, 180)" className="cursor-pointer" onClick={handleValveClick}>
               <circle cx="0" cy="-30" r="20" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="3" />
               <circle cx="0" cy="-30" r="16" fill="#FAF6EE" />
               <line 
@@ -125,7 +163,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Valve Wheel */}
-            <g transform="translate(280, 160)" className="cursor-pointer group" onClick={handleValveClick}>
+            <g transform="translate(250, 180)" className="cursor-pointer group" onClick={handleValveClick}>
               <circle cx="0" cy="0" r="16" fill="#F2C94C" stroke="#1e1e21" strokeWidth="3" className="group-hover:rotate-45 transition-transform" />
               <line x1="-12" y1="0" x2="12" y2="0" stroke="#1e1e21" strokeWidth="3" />
               <line x1="0" y1="-14" x2="0" y2="14" stroke="#1e1e21" strokeWidth="3" />
@@ -133,7 +171,7 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Distillation Beaker Vessel */}
-            <g transform="translate(950, 180)">
+            <g transform="translate(980, 200)">
               <path d="M-22 0 L22 0 L32 60 L-32 60 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="3" />
               <rect x="-8" y="-25" width="16" height="25" fill="#D9829C" stroke="#1e1e21" strokeWidth="2" />
               <circle cx="-8" cy="35" r="4" fill="#6BB2D5" className="animate-bubble-1" />
@@ -141,13 +179,13 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
             </g>
 
             {/* Dripping Liquid to Conveyor Belt */}
-            <path d="M 950 240 L 950 290" stroke="#6BB2D5" strokeWidth="4" strokeDasharray="6 6" className="animate-liquid" />
+            <path d="M 980 260 L 980 310" stroke="#6BB2D5" strokeWidth="4" strokeDasharray="6 6" className="animate-liquid" />
 
             {/* Conveyor Belt Platform */}
-            <rect x="50" y="300" width="1050" height="16" rx="8" fill="#1e1e21" />
-            <circle cx="70" cy="308" r="5" fill="#FAF6EE" />
-            <circle cx="1080" cy="308" r="5" fill="#FAF6EE" />
-            <circle cx="575" cy="308" r="5" fill="#FAF6EE" />
+            <rect x="50" y="320" width="1080" height="16" rx="8" fill="#1e1e21" />
+            <circle cx="70" cy="328" r="5" fill="#FAF6EE" />
+            <circle cx="1110" cy="328" r="5" fill="#FAF6EE" />
+            <circle cx="590" cy="328" r="5" fill="#FAF6EE" />
           </svg>
 
           {/* Conveyor Belt Jars */}
