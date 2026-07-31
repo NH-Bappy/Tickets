@@ -17,7 +17,7 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="flex items-center gap-2">
-          <span>© 2023 Creative South</span>
+          <span>© 2026 Creative South</span>
           <span>•</span>
           <span className="flex items-center gap-1 text-[#FF7640]">
             Made with <Heart className="w-3.5 h-3.5 fill-current text-[#FF7640]" /> for Creators

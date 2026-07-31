@@ -99,7 +99,7 @@ export default function TicketModal({ isOpen, onClose }) {
                     Select Your Tickets
                   </h3>
                   <p className="font-fredoka text-xs md:text-sm text-zinc-400">
-                    Creative South 2023 — March 30 to April 1, Columbus GA
+                    Creative South 2026 — March 30 to April 1, Columbus GA
                   </p>
                 </div>
               </div>

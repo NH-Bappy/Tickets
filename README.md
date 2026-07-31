@@ -1,6 +1,6 @@
-# 🎨 Creative South — "Pure Imagination" (2023)
+# 🎨 Creative South — "Pure Imagination" (2026)
 
-A high-performance, visually stunning retro 1970s conference landing page for **Creative South: Pure Imagination** (March 30 - April 1, 2023 | Columbus, GA). Built with modern web technologies including **React 19**, **Vite**, **Tailwind CSS v4**, **Framer Motion**, **GSAP**, **Lucide Icons**, and custom **Web Audio API** sound synthesis.
+A high-performance, visually stunning retro 1970s conference landing page for **Creative South: Pure Imagination** (March 30 - April 1, 2026 | Columbus, GA). Built with modern web technologies including **React 19**, **Vite**, **Tailwind CSS v4**, **Framer Motion**, **GSAP**, **Lucide Icons**, and custom **Web Audio API** sound synthesis.
 
 ---
 
@@ -76,4 +76,4 @@ A high-performance, visually stunning retro 1970s conference landing page for **
 ---
 
 ## 📜 License
-© 2023 Creative South. Built with ❤️ for creators.
+© 2026 Creative South. Built with ❤️ for creators.

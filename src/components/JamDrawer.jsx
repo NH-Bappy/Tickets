@@ -25,7 +25,7 @@ export default function JamDrawer({ isOpen, onClose }) {
                   ★
                 </span>
                 <h3 className="font-shrikhand text-2xl text-[#FFE600]">
-                  The Jam 2023
+                  The Jam 2026
                 </h3>
               </div>
               <button 

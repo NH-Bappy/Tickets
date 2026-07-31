@@ -49,7 +49,7 @@ export default function ShopModal({ isOpen, onClose }) {
                   Official Merch Shop
                 </h3>
                 <p className="font-fredoka text-xs text-zinc-400">
-                  Creative South 2023 Exclusive Items
+                  Creative South 2026 Exclusive Items
                 </p>
               </div>
             </div>

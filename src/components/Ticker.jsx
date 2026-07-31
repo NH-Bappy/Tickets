@@ -4,7 +4,7 @@ import { Sparkles, Ticket, Flame, Heart } from 'lucide-react';
 export default function Ticker() {
   const tickerItems = [
     "EARLY BIRD TICKETS ON SALE NOW!",
-    "MARCH 30 - APRIL 1, 2023",
+    "MARCH 30 - APRIL 1, 2026",
     "COLUMBUS, GA",
     "PURE IMAGINATION",
     "SPEAKERS & WORKSHOPS",

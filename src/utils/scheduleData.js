@@ -2,7 +2,7 @@ export const scheduleData = {
   thursday: {
     dayNum: "30",
     dayName: "Thursday",
-    dateFull: "March 30, 2023",
+    dateFull: "March 30, 2026",
     color: "#6C5CE7",
     bgClass: "bg-[#6C5CE7]",
     textClass: "text-[#6C5CE7]",
@@ -24,7 +24,7 @@ export const scheduleData = {
   friday: {
     dayNum: "31",
     dayName: "Friday",
-    dateFull: "March 31, 2023",
+    dateFull: "March 31, 2026",
     color: "#E84393",
     bgClass: "bg-[#E84393]",
     textClass: "text-[#E84393]",
@@ -46,7 +46,7 @@ export const scheduleData = {
   saturday: {
     dayNum: "01",
     dayName: "Saturday",
-    dateFull: "April 01, 2023",
+    dateFull: "April 01, 2026",
     color: "#FF7640",
     bgClass: "bg-[#FF7640]",
     textClass: "text-[#FF7640]",

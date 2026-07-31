@@ -59,7 +59,7 @@ export default function ScheduleModal({ slot, onClose }) {
           </div>
 
           <p className="font-fredoka text-xs md:text-sm text-zinc-300 leading-relaxed my-4">
-            Join this high-energy session packed with actionable creative insights, live demonstrations, and inspiring takeaways from top industry leaders at Creative South 2023!
+            Join this high-energy session packed with actionable creative insights, live demonstrations, and inspiring takeaways from top industry leaders at Creative South 2026!
           </p>
 
           <div className="mt-6 pt-4 border-t border-zinc-800 flex justify-end">

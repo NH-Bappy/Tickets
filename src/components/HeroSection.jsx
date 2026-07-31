@@ -47,7 +47,7 @@ export default function HeroSection({ onOpenTickets }) {
           className="inline-flex items-center gap-2 bg-zinc-800/80 border border-zinc-700 text-[#F5EBE6] font-fredoka px-5 py-2 rounded-full text-sm md:text-base font-medium shadow-lg mb-6 hover:border-[#FFE600] transition-colors"
         >
           <Calendar className="w-4 h-4 text-[#FFE600]" />
-          <span>March 30 - April 1, 2023</span>
+          <span>March 30 - April 1, 2026</span>
           <span className="text-zinc-500">•</span>
           <MapPin className="w-4 h-4 text-[#FF7640]" />
           <span>Columbus, GA</span>
