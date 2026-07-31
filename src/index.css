@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-shrikhand: 'Shrikhand', cursive;
+    --font-fredoka: 'Fredoka', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+    --font-righteous: 'Righteous', cursive;
+  }
+
+  body {
+    font-family: var(--font-fredoka);
+    background-color: #18181b;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-shrikhand {
+  font-family: 'Shrikhand', cursive;
+}
+
+.font-fredoka {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-righteous {
+  font-family: 'Righteous', cursive;
+}
+
+/* 70s Vintage 3D Layered Text Shadow Effect */
+.retro-text-shadow {
+  text-shadow: 
+    3px 3px 0px #F5EBE6,
+    6px 6px 0px #FFAA00,
+    9px 9px 0px #FF5964,
+    12px 12px 0px #6C5CE7,
+    15px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.retro-text-shadow-sm {
+  text-shadow: 
+    2px 2px 0px #F5EBE6,
+    4px 4px 0px #FFAA00,
+    6px 6px 0px #FF5964,
+    8px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.retro-ticket-shadow {
+  text-shadow: 
+    4px 4px 0px #FFE600,
+    8px 8px 0px #FF7640,
+    12px 12px 0px #E84393,
+    16px 16px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Liquid flow & bubble animations for Speakers section */
+@keyframes liquidFlow {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-liquid {
+  stroke-dasharray: 12 8;
+  animation: liquidFlow 2s linear infinite;
+}
+
+@keyframes bubbleUp {
+  0% { transform: translateY(0px) scale(0.8); opacity: 0; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-30px) scale(1.2); opacity: 0; }
+}
+
+.animate-bubble-1 {
+  animation: bubbleUp 2s ease-in-out infinite;
+}
+
+.animate-bubble-2 {
+  animation: bubbleUp 2.5s ease-in-out infinite 0.6s;
+}
+
+.animate-bubble-3 {
+  animation: bubbleUp 1.8s ease-in-out infinite 1.2s;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 170, 0, 0.4)); }
+  50% { filter: drop-shadow(0 0 18px rgba(255, 170, 0, 0.8)); }
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7640;
+}
