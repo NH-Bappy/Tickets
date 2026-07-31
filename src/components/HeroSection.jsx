@@ -13,32 +13,54 @@ export default function HeroSection({ onOpenTickets }) {
   };
 
   const rainbowBands = [
-    { color: '#8E7CC3', offset: 0 },   // Muted Purple (Outer)
+    { color: '#8E7CC3', offset: 0 },   // Muted Purple
     { color: '#6BB2D5', offset: 12 },  // Muted Sky Blue
     { color: '#76B894', offset: 24 },  // Muted Sage Green
     { color: '#F2C94C', offset: 36 },  // Muted Vintage Yellow
     { color: '#E6914D', offset: 48 },  // Muted Soft Orange
     { color: '#DE5B5B', offset: 60 },  // Muted Coral Red
-    { color: '#D9829C', offset: 72 }   // Muted Soft Pink (Inner)
+    { color: '#D9829C', offset: 72 }   // Muted Soft Pink
+  ];
+
+  // Rich Star Sparkle Dataset for Hero Section
+  const heroStars = [
+    { top: '6%', left: '8%', size: 'text-base', color: 'text-white/60', icon: '✦', delay: '0s' },
+    { top: '10%', left: '22%', size: 'text-xs', color: 'text-[#F2C94C]/70', icon: '✦', delay: '1s' },
+    { top: '14%', left: '38%', size: 'text-sm', color: 'text-white/50', icon: '✧', delay: '0.5s' },
+    { top: '8%', right: '18%', size: 'text-lg', color: 'text-[#E6914D]/80', icon: '✦', delay: '1.2s' },
+    { top: '18%', right: '8%', size: 'text-xs', color: 'text-white/60', icon: '✦', delay: '0.2s' },
+    { top: '28%', left: '5%', size: 'text-sm', color: 'text-[#F2C94C]/80', icon: '★', delay: '1.5s' },
+    { top: '32%', left: '16%', size: 'text-xs', color: 'text-white/40', icon: '✧', delay: '0.7s' },
+    { top: '25%', right: '28%', size: 'text-xs', color: 'text-white/50', icon: '✦', delay: '0.4s' },
+    { top: '35%', right: '12%', size: 'text-sm', color: 'text-[#F2C94C]/70', icon: '✦', delay: '1.1s' },
+    { top: '45%', left: '12%', size: 'text-base', color: 'text-[#E6914D]/70', icon: '✦', delay: '0.8s' },
+    { top: '50%', left: '28%', size: 'text-xs', color: 'text-white/40', icon: '✧', delay: '1.3s' },
+    { top: '48%', right: '22%', size: 'text-xs', color: 'text-[#F2C94C]/80', icon: '✦', delay: '0.6s' },
+    { top: '58%', right: '6%', size: 'text-sm', color: 'text-white/60', icon: '✦', delay: '1.4s' },
+    { top: '65%', left: '18%', size: 'text-sm', color: 'text-white/50', icon: '✧', delay: '0.3s' },
+    { top: '70%', left: '4%', size: 'text-xs', color: 'text-[#E6914D]/80', icon: '✦', delay: '1s' },
+    { top: '68%', right: '15%', size: 'text-base', color: 'text-[#F2C94C]/70', icon: '★', delay: '0.9s' },
+    { top: '78%', right: '32%', size: 'text-xs', color: 'text-white/40', icon: '✦', delay: '1.6s' },
+    { top: '82%', left: '35%', size: 'text-xs', color: 'text-[#F2C94C]/60', icon: '✧', delay: '0.1s' },
   ];
 
   return (
     <section className="relative w-full bg-[#1e1e21] text-[#FAF6EE] pt-4 pb-0 overflow-hidden select-none">
       
-      {/* 4-Point Star Sparkles scattered in Dark Background */}
+      {/* Dense 4-Point Star Sparkles in Hero */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <span className="absolute top-10 left-12 text-white/40 text-sm">✦</span>
-        <span className="absolute top-24 left-1/4 text-white/30 text-xs">✧</span>
-        <span className="absolute top-14 right-24 text-white/40 text-base">✦</span>
-        <span className="absolute top-44 right-16 text-white/30 text-sm">✧</span>
-        <span className="absolute top-72 left-20 text-white/40 text-xs">✦</span>
-        <span className="absolute top-96 right-1/4 text-white/30 text-sm">✦</span>
-        <span className="absolute top-20 left-1/3 text-[#E6914D]/60 text-xs">✦</span>
-        <span className="absolute top-60 left-10 text-[#F2C94C]/70 text-sm">✦</span>
-        <span className="absolute top-72 right-36 text-[#E6914D]/70 text-xs">✧</span>
+        {heroStars.map((star, i) => (
+          <span 
+            key={i}
+            className={`absolute ${star.size} ${star.color} animate-pulse`}
+            style={{ top: star.top, left: star.left, right: star.right, animationDelay: star.delay }}
+          >
+            {star.icon}
+          </span>
+        ))}
       </div>
 
-      {/* Sun / Planet Character (Top Left of Date) */}
+      {/* Sun / Planet Character */}
       <motion.div 
         animate={{ rotate: [-3, 3, -3], y: [0, -5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -84,7 +106,7 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* Exact 2D Ribbon Path Structure from Reference Screenshot */}
+      {/* 2D Ribbon Path */}
       <div className="absolute top-0 right-0 w-full h-[620px] pointer-events-none z-0 overflow-hidden">
         <svg className="w-full h-full" viewBox="0 0 1200 640" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
@@ -120,7 +142,7 @@ export default function HeroSection({ onOpenTickets }) {
           <p className="text-xs text-zinc-400 font-medium">Columbus, GA</p>
         </div>
 
-        {/* 70s Title: Pure (Line 1), Imagination (Line 2) */}
+        {/* 70s Title */}
         <div className="relative my-2 select-none">
           <h1 className="font-shrikhand text-7xl sm:text-8xl md:text-[130px] leading-[0.88] text-[#FAF6EE] tracking-normal retro-text-shadow">
             Pure <br />
@@ -128,7 +150,7 @@ export default function HeroSection({ onOpenTickets }) {
           </h1>
         </div>
 
-        {/* Space Beetle Rocket riding the Rainbow Track (Left) */}
+        {/* Space Beetle Rocket */}
         <motion.div 
           animate={{ x: [0, 6, 0], y: [0, -6, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -143,7 +165,7 @@ export default function HeroSection({ onOpenTickets }) {
           </svg>
         </motion.div>
 
-        {/* Floating Peach Fruit & Yellow Pencil */}
+        {/* Floating Peach Fruit */}
         <motion.div 
           animate={{ rotate: [-6, 6, -6] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
@@ -155,7 +177,7 @@ export default function HeroSection({ onOpenTickets }) {
           </svg>
         </motion.div>
 
-        {/* Floating Red Chili / Capsule (Under Rainbow Bend on Right) */}
+        {/* Floating Red Chili */}
         <motion.div 
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
@@ -179,7 +201,7 @@ export default function HeroSection({ onOpenTickets }) {
           </button>
         </motion.div>
 
-        {/* Smiling Daisy Flower (Right Edge) */}
+        {/* Smiling Daisy Flower */}
         <motion.div 
           animate={{ rotate: [-2, 2, -2] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -205,7 +227,7 @@ export default function HeroSection({ onOpenTickets }) {
           </svg>
         </motion.div>
 
-        {/* Left Quote & Pink Play Badge */}
+        {/* Left Quote */}
         <div className="w-full flex items-center justify-between mt-4 pb-12 z-20 px-4">
           <div className="flex items-center gap-3 max-w-xs text-left">
             <button
@@ -222,13 +244,13 @@ export default function HeroSection({ onOpenTickets }) {
 
       </div>
 
-      {/* Wavy Ground Transition into Cream Section (#F5F0E6) */}
+      {/* Wavy Ground Transition into Cream Section */}
       <div className="relative w-full overflow-hidden leading-none z-20">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-20 md:h-28" fill="#F5F0E6">
           <path d="M0,40 C250,110 550,-10 850,70 C1050,110 1150,50 1200,30 L1200,120 L0,120 Z" />
         </svg>
 
-        {/* Blue Mascot Character Operating Dial Box */}
+        {/* Blue Mascot */}
         <div className="absolute bottom-2 left-10 md:left-24 z-30 flex items-end">
           <svg width="110" height="115" viewBox="0 0 110 115" fill="none">
             <path d="M20 50 Q55 15 90 50 C100 80 90 100 55 105 C20 100 10 80 20 50 Z" fill="#8E7CC3" stroke="#1e1e21" strokeWidth="3" />
