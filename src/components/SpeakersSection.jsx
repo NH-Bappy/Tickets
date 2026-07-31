@@ -52,20 +52,20 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
           </motion.div>
         )}
 
-        {/* SVG Connected Pipes and Exact Horn Funnel Connection */}
+        {/* SVG Connected Pipes and Perfect Seamless Rainbow Ribbon Connection */}
         <div className="relative w-full overflow-x-auto pb-4">
           <svg className="w-full min-w-[850px] h-[380px]" viewBox="0 0 1200 380" fill="none">
             
-            {/* White Cloudpuff where Rainbow enters from the top dark section */}
-            <g transform="translate(230, -10)">
+            {/* White Cloudpuff placed EXACTLY where the top rainbow exits from HeroSection */}
+            <g transform="translate(260, -15)" className="z-20">
               <path d="M10 25 Q30 5 50 18 Q70 5 90 20 Q110 10 115 35 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2.5" />
-              <circle cx="35" cy="30" r="14" fill="#FAF6EE" />
-              <circle cx="65" cy="30" r="18" fill="#FAF6EE" />
-              <circle cx="95" cy="32" r="12" fill="#FAF6EE" />
+              <circle cx="35" cy="30" r="16" fill="#FAF6EE" />
+              <circle cx="65" cy="30" r="20" fill="#FAF6EE" />
+              <circle cx="95" cy="32" r="14" fill="#FAF6EE" />
             </g>
 
             {/* CONTINUOUS 7-STRIP RAINBOW STREAM: 
-                Enters from top (X = 300), passes through Cloudpuff, 
+                Starts at X = 295 (matching top ribbon exit!), flows through Cloudpuff, 
                 curves horizontally right under top pipe loop, 
                 and streams straight into the Left Mouth of the Horizontal Horn Funnel! */}
             <g className="z-10">
@@ -73,9 +73,9 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
                 <path
                   key={i}
                   d={`
-                    M ${280 + band.offset} -30 
-                    C ${295 + band.offset} 50, ${360 + band.offset} 100, ${520 + band.offset} 140 
-                    C ${640 + band.offset} 170, ${760 + band.offset * 0.4} 190, ${820} ${195 + band.offset * 0.5}
+                    M ${295 + band.offset} -30 
+                    C ${310 + band.offset} 50, ${400 + band.offset} 100, ${540 + band.offset} 140 
+                    C ${660 + band.offset} 170, ${760 + band.offset * 0.4} 190, ${820} ${195 + band.offset * 0.5}
                   `}
                   stroke={band.color}
                   strokeWidth="7"
@@ -85,20 +85,16 @@ export default function SpeakersSection({ onBecomeSpeaker }) {
               ))}
             </g>
 
-            {/* HORIZONTAL GOLDEN HORN FUNNEL: Pointing Left with open mouth on the left side! */}
+            {/* HORIZONTAL GOLDEN HORN FUNNEL */}
             <g transform="translate(820, 160)" className="z-20">
-              {/* Golden Cone Mouth pointing Left */}
               <polygon points="0,0 80,35 80,65 0,100" fill="#F2C94C" stroke="#1e1e21" strokeWidth="3" />
-              {/* Horn Rim Outline */}
               <line x1="0" y1="0" x2="0" y2="100" stroke="#1e1e21" strokeWidth="4" />
-              {/* Back Ring connectors */}
               <rect x="80" y="38" width="12" height="24" rx="2" fill="#E6914D" stroke="#1e1e21" strokeWidth="2" />
-              {/* Pipe connection leaving right side of Horn */}
               <path d="M 92 50 L 1100 50" stroke="#1e1e21" strokeWidth="12" strokeLinecap="round" />
               <path d="M 92 50 L 1100 50" stroke="#FAF6EE" strokeWidth="6" strokeLinecap="round" />
             </g>
 
-            {/* WHITE LABORATORY PIPES matching user's reference snippet layout */}
+            {/* WHITE LABORATORY PIPES */}
             {/* Top Loop Pipe above Rainbow */}
             <path 
               d="M 850 -20 L 850 50 C 850 90, 920 90, 920 40 C 920 0, 800 -10, 780 40 L 780 120" 
