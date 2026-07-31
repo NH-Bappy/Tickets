@@ -18,7 +18,7 @@ export default function TicketsSection({ onOpenTickets }) {
   return (
     <section className="relative w-full bg-[#18181b] pt-16 pb-24 px-4 overflow-hidden border-t border-zinc-800">
       
-      {/* Dense Star Sparkles in Footer Hero */}
+      {/* Dense Star Sparkles */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {footerStars.map((star, i) => (
           <span 
@@ -31,13 +31,15 @@ export default function TicketsSection({ onOpenTickets }) {
         ))}
       </div>
 
-      {/* Top Rainbow Wave Stream */}
+      {/* Endless Flowing River Rainbow Stream at Top (No cutoffs, extends far past screen edges) */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none z-0">
-        <svg className="w-full h-16 md:h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M-100,20 C200,100 400,-20 700,60 C900,110 1100,10 1300,50" stroke="#FF5964" strokeWidth="12" fill="none" />
-          <path d="M-100,32 C200,112 400,-8 700,72 C900,122 1100,22 1300,62" stroke="#FFAA00" strokeWidth="12" fill="none" />
-          <path d="M-100,44 C200,124 400,4 700,84 C900,134 1100,34 1300,74" stroke="#FFE600" strokeWidth="12" fill="none" />
-          <path d="M-100,56 C200,136 400,16 700,96 C900,146 1100,46 1300,86" stroke="#6C5CE7" strokeWidth="12" fill="none" />
+        <svg className="w-full h-20 md:h-28" viewBox="0 0 1400 120" preserveAspectRatio="none">
+          <path d="M-200,20 C150,110 450,-30 750,70 C1050,120 1250,10 1600,60" stroke="#DE5B5B" strokeWidth="12" fill="none" />
+          <path d="M-200,32 C150,122 450,-18 750,82 C1050,132 1250,22 1600,72" stroke="#E6914D" strokeWidth="12" fill="none" />
+          <path d="M-200,44 C150,134 450,-6 750,94 C1050,144 1250,34 1600,84" stroke="#F2C94C" strokeWidth="12" fill="none" />
+          <path d="M-200,56 C150,146 450,6 750,106 C1050,156 1250,46 1600,96" stroke="#76B894" strokeWidth="12" fill="none" />
+          <path d="M-200,68 C150,158 450,18 750,118 C1050,168 1250,58 1600,108" stroke="#6BB2D5" strokeWidth="12" fill="none" />
+          <path d="M-200,80 C150,170 450,30 750,130 C1050,180 1250,70 1600,120" stroke="#8E7CC3" strokeWidth="12" fill="none" />
         </svg>
       </div>
 
@@ -99,12 +101,15 @@ export default function TicketsSection({ onOpenTickets }) {
         </motion.div>
       </div>
 
-      {/* Bottom Rainbow Stream */}
+      {/* Endless Flowing River Rainbow Stream at Bottom (No cutoffs, extends far past screen edges) */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none z-0">
-        <svg className="w-full h-16 md:h-20" viewBox="0 0 1200 100" preserveAspectRatio="none">
-          <path d="M-100,80 C200,20 400,90 700,30 C900,10 1100,70 1300,20" stroke="#FF5964" strokeWidth="10" fill="none" />
-          <path d="M-100,68 C200,8 400,78 700,18 C900,-2 1100,58 1300,8" stroke="#00D09C" strokeWidth="10" fill="none" />
-          <path d="M-100,56 C200,-4 400,66 700,6 C900,-14 1100,46 1300,-4" stroke="#6C5CE7" strokeWidth="10" fill="none" />
+        <svg className="w-full h-20 md:h-24" viewBox="0 0 1400 100" preserveAspectRatio="none">
+          <path d="M-200,80 C200,20 500,90 850,30 C1100,10 1300,70 1600,20" stroke="#DE5B5B" strokeWidth="10" fill="none" />
+          <path d="M-200,68 C200,8 500,78 850,18 C1100,-2 1300,58 1600,8" stroke="#E6914D" strokeWidth="10" fill="none" />
+          <path d="M-200,56 C200,-4 500,66 850,6 C1100,-14 1300,46 1600,-4" stroke="#F2C94C" strokeWidth="10" fill="none" />
+          <path d="M-200,44 C200,-16 500,54 850,-6 C1100,-26 1300,34 1600,-16" stroke="#76B894" strokeWidth="10" fill="none" />
+          <path d="M-200,32 C200,-28 500,42 850,-18 C1100,-38 1300,22 1600,-28" stroke="#6BB2D5" strokeWidth="10" fill="none" />
+          <path d="M-200,20 C200,-40 500,30 850,-30 C1100,-50 1300,10 1600,-40" stroke="#8E7CC3" strokeWidth="10" fill="none" />
         </svg>
       </div>
 

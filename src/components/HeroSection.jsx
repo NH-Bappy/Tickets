@@ -22,7 +22,6 @@ export default function HeroSection({ onOpenTickets }) {
     { color: '#D9829C', offset: 72 }   // Muted Soft Pink
   ];
 
-  // Rich Star Sparkle Dataset for Hero Section
   const heroStars = [
     { top: '6%', left: '8%', size: 'text-base', color: 'text-white/60', icon: '✦', delay: '0s' },
     { top: '10%', left: '22%', size: 'text-xs', color: 'text-[#F2C94C]/70', icon: '✦', delay: '1s' },
@@ -41,13 +40,12 @@ export default function HeroSection({ onOpenTickets }) {
     { top: '70%', left: '4%', size: 'text-xs', color: 'text-[#E6914D]/80', icon: '✦', delay: '1s' },
     { top: '68%', right: '15%', size: 'text-base', color: 'text-[#F2C94C]/70', icon: '★', delay: '0.9s' },
     { top: '78%', right: '32%', size: 'text-xs', color: 'text-white/40', icon: '✦', delay: '1.6s' },
-    { top: '82%', left: '35%', size: 'text-xs', color: 'text-[#F2C94C]/60', icon: '✧', delay: '0.1s' },
   ];
 
   return (
     <section className="relative w-full bg-[#1e1e21] text-[#FAF6EE] pt-4 pb-0 overflow-hidden select-none">
       
-      {/* Dense 4-Point Star Sparkles in Hero */}
+      {/* Dense Star Sparkles */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {heroStars.map((star, i) => (
           <span 
@@ -106,25 +104,25 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* 2D Ribbon Path */}
-      <div className="absolute top-0 right-0 w-full h-[620px] pointer-events-none z-0 overflow-hidden">
-        <svg className="w-full h-full" viewBox="0 0 1200 640" fill="none" preserveAspectRatio="none">
+      {/* Continuous Endless Flowing River Rainbow Stream (No cutoffs) */}
+      <div className="absolute top-0 right-0 w-full h-[680px] pointer-events-none z-0 overflow-hidden">
+        <svg className="w-full h-full" viewBox="0 0 1200 700" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
             const yOff = band.offset;
             return (
               <path
                 key={i}
                 d={`
-                  M ${1150 + yOff} ${-50 + yOff} 
-                  C ${1020 + yOff} 120, ${750 + yOff} 40, ${500 + yOff} 80 
-                  C ${280 + yOff} 120, ${100 + yOff} 220, ${220 + yOff} 290 
-                  C ${350 + yOff} 360, ${780 + yOff} 240, ${920 + yOff} 330 
-                  C ${1000 + yOff} 390, ${750 + yOff} 420, ${480 + yOff} 400 
-                  C ${260 + yOff} 380, ${550 + yOff} 520, ${860 + yOff} 490 
-                  C ${960 + yOff} 480, ${940 + yOff} 600, ${930 + yOff} 720
+                  M ${1350 + yOff} ${-100 + yOff} 
+                  C ${1080 + yOff} 110, ${780 + yOff} 30, ${500 + yOff} 75 
+                  C ${260 + yOff} 115, ${80 + yOff} 210, ${210 + yOff} 285 
+                  C ${340 + yOff} 355, ${790 + yOff} 235, ${930 + yOff} 325 
+                  C ${1020 + yOff} 385, ${760 + yOff} 425, ${470 + yOff} 405 
+                  C ${240 + yOff} 385, ${540 + yOff} 530, ${870 + yOff} 495 
+                  C ${980 + yOff} 475, ${960 + yOff} 620, ${930 + yOff} 850
                 `}
                 stroke={band.color}
-                strokeWidth="11"
+                strokeWidth="12"
                 strokeLinecap="round"
                 fill="none"
               />
