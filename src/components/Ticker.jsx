@@ -1,22 +1,23 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Ticket, Flame, Heart } from 'lucide-react';
 
 export default function Ticker() {
   const tickerItems = [
-    "early bird tickets on sale now",
-    "march 30 - april 1, 2026",
-    "columbus, ga",
-    "pure imagination",
-    "speakers & workshops",
+    "EARLY BIRD TICKETS ON SALE NOW!",
+    "MARCH 30 - APRIL 1, 2026",
+    "COLUMBUS, GA",
+    "PURE IMAGINATION",
+    "SPEAKERS & WORKSHOPS",
+    "HUG IN PERSON",
   ];
 
   return (
-    <div className="w-full bg-[#141416] border-b border-zinc-800/60 text-zinc-300 font-fredoka text-xs tracking-wider lowercase overflow-hidden py-1.5 shadow-inner select-none relative z-50">
-      <div className="animate-marquee whitespace-nowrap flex items-center gap-8">
-        {[...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems].map((item, index) => (
-          <span key={index} className="inline-flex items-center gap-4">
+    <div className="w-full bg-[#1e1e24] border-b border-zinc-800 text-[#FFE600] font-fredoka font-semibold text-xs md:text-sm tracking-wider uppercase overflow-hidden py-2.5 shadow-inner select-none relative z-50">
+      <div className="animate-marquee whitespace-nowrap flex items-center gap-6">
+        {[...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems].map((item, index) => (
+          <span key={index} className="inline-flex items-center gap-3">
             <span className="hover:text-white transition-colors duration-200">{item}</span>
-            <span className="text-[#FF7640] text-[10px]">★</span>
+            <Sparkles className="w-3.5 h-3.5 text-[#FF7640] animate-pulse" />
           </span>
         ))}
       </div>
