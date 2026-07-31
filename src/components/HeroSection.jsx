@@ -39,13 +39,12 @@ export default function HeroSection({ onOpenTickets }) {
     { top: '65%', left: '18%', size: 'text-sm', color: 'text-white/50', icon: '✧', delay: '0.3s' },
     { top: '70%', left: '4%', size: 'text-xs', color: 'text-[#E6914D]/80', icon: '✦', delay: '1s' },
     { top: '68%', right: '15%', size: 'text-base', color: 'text-[#F2C94C]/70', icon: '★', delay: '0.9s' },
-    { top: '78%', right: '32%', size: 'text-xs', color: 'text-white/40', icon: '✦', delay: '1.6s' },
   ];
 
   return (
     <section className="relative w-full bg-[#1e1e21] text-[#FAF6EE] pt-4 pb-0 overflow-hidden select-none">
       
-      {/* Dense Star Sparkles */}
+      {/* Star Sparkles */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {heroStars.map((star, i) => (
           <span 
@@ -104,9 +103,9 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* Continuous Endless Flowing River Rainbow Stream (No cutoffs) */}
-      <div className="absolute top-0 right-0 w-full h-[680px] pointer-events-none z-0 overflow-hidden">
-        <svg className="w-full h-full" viewBox="0 0 1200 700" fill="none" preserveAspectRatio="none">
+      {/* Flowing Rainbow Ribbon Stream */}
+      <div className="absolute top-0 right-0 w-full h-[650px] pointer-events-none z-10 overflow-hidden">
+        <svg className="w-full h-full" viewBox="0 0 1200 680" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
             const yOff = band.offset;
             return (
@@ -118,11 +117,11 @@ export default function HeroSection({ onOpenTickets }) {
                   C ${260 + yOff} 115, ${80 + yOff} 210, ${210 + yOff} 285 
                   C ${340 + yOff} 355, ${790 + yOff} 235, ${930 + yOff} 325 
                   C ${1020 + yOff} 385, ${760 + yOff} 425, ${470 + yOff} 405 
-                  C ${240 + yOff} 385, ${540 + yOff} 530, ${870 + yOff} 495 
-                  C ${980 + yOff} 475, ${960 + yOff} 620, ${930 + yOff} 850
+                  C ${240 + yOff} 385, ${540 + yOff} 530, ${750 + yOff} 495 
+                  C ${840 + yOff} 480, ${820 + yOff} 620, ${800 + yOff} 720
                 `}
                 stroke={band.color}
-                strokeWidth="12"
+                strokeWidth="11"
                 strokeLinecap="round"
                 fill="none"
               />
@@ -132,7 +131,7 @@ export default function HeroSection({ onOpenTickets }) {
       </div>
 
       {/* Main Centered Content */}
-      <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center z-10 px-4">
+      <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center z-20 px-4">
         
         {/* Date & Location Text */}
         <div className="font-fredoka text-[#FAF6EE] text-center mb-2">
