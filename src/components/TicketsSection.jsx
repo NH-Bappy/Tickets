@@ -15,6 +15,8 @@ export default function TicketsSection({ onOpenTickets }) {
     { top: '75%', right: '12%', size: 'text-sm', color: 'text-[#FF7640]/80', icon: '✦' },
   ];
 
+  const riverColors = ['#8E7CC3', '#6BB2D5', '#76B894', '#F2C94C', '#E6914D', '#DE5B5B', '#D9829C'];
+
   return (
     <section className="relative w-full bg-[#18181b] pt-16 pb-24 px-4 overflow-hidden border-t border-zinc-800">
       
@@ -31,15 +33,33 @@ export default function TicketsSection({ onOpenTickets }) {
         ))}
       </div>
 
-      {/* Endless Flowing River Rainbow Stream at Top (No cutoffs, extends far past screen edges) */}
+      {/* MULTI-BRANCH RIVER RAINBOW STREAMS AT TOP (Flowing in from multiple places: top-left & top-right) */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none z-0">
-        <svg className="w-full h-20 md:h-28" viewBox="0 0 1400 120" preserveAspectRatio="none">
-          <path d="M-200,20 C150,110 450,-30 750,70 C1050,120 1250,10 1600,60" stroke="#DE5B5B" strokeWidth="12" fill="none" />
-          <path d="M-200,32 C150,122 450,-18 750,82 C1050,132 1250,22 1600,72" stroke="#E6914D" strokeWidth="12" fill="none" />
-          <path d="M-200,44 C150,134 450,-6 750,94 C1050,144 1250,34 1600,84" stroke="#F2C94C" strokeWidth="12" fill="none" />
-          <path d="M-200,56 C150,146 450,6 750,106 C1050,156 1250,46 1600,96" stroke="#76B894" strokeWidth="12" fill="none" />
-          <path d="M-200,68 C150,158 450,18 750,118 C1050,168 1250,58 1600,108" stroke="#6BB2D5" strokeWidth="12" fill="none" />
-          <path d="M-200,80 C150,170 450,30 750,130 C1050,180 1250,70 1600,120" stroke="#8E7CC3" strokeWidth="12" fill="none" />
+        <svg className="w-full h-28 md:h-36" viewBox="0 0 1400 150" preserveAspectRatio="none">
+          {/* Branch A: Flowing from Top Left across center */}
+          {riverColors.map((color, i) => (
+            <path
+              key={`top-a-${i}`}
+              d={`M -200 ${10 + i * 10} C 200 ${100 + i * 8}, 500 ${-20 + i * 8}, 850 ${70 + i * 8} C 1100 ${120 + i * 8}, 1300 ${20 + i * 8}, 1600 ${60 + i * 8}`}
+              stroke={color}
+              strokeWidth="9"
+              strokeLinecap="round"
+              fill="none"
+            />
+          ))}
+
+          {/* Branch B: Second River Branch flowing from Top Right looping back across */}
+          {riverColors.map((color, i) => (
+            <path
+              key={`top-b-${i}`}
+              d={`M 1600 ${-40 + i * 9} C 1300 ${80 + i * 8}, 900 ${-10 + i * 8}, 550 ${90 + i * 8} C 300 ${140 + i * 8}, 100 ${30 + i * 8}, -200 ${70 + i * 8}`}
+              stroke={color}
+              strokeWidth="8"
+              opacity="0.85"
+              strokeLinecap="round"
+              fill="none"
+            />
+          ))}
         </svg>
       </div>
 
@@ -101,15 +121,31 @@ export default function TicketsSection({ onOpenTickets }) {
         </motion.div>
       </div>
 
-      {/* Endless Flowing River Rainbow Stream at Bottom (No cutoffs, extends far past screen edges) */}
+      {/* MULTI-BRANCH RIVER RAINBOW STREAMS AT BOTTOM (Flowing in & out from multiple places) */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none z-0">
-        <svg className="w-full h-20 md:h-24" viewBox="0 0 1400 100" preserveAspectRatio="none">
-          <path d="M-200,80 C200,20 500,90 850,30 C1100,10 1300,70 1600,20" stroke="#DE5B5B" strokeWidth="10" fill="none" />
-          <path d="M-200,68 C200,8 500,78 850,18 C1100,-2 1300,58 1600,8" stroke="#E6914D" strokeWidth="10" fill="none" />
-          <path d="M-200,56 C200,-4 500,66 850,6 C1100,-14 1300,46 1600,-4" stroke="#F2C94C" strokeWidth="10" fill="none" />
-          <path d="M-200,44 C200,-16 500,54 850,-6 C1100,-26 1300,34 1600,-16" stroke="#76B894" strokeWidth="10" fill="none" />
-          <path d="M-200,32 C200,-28 500,42 850,-18 C1100,-38 1300,22 1600,-28" stroke="#6BB2D5" strokeWidth="10" fill="none" />
-          <path d="M-200,20 C200,-40 500,30 850,-30 C1100,-50 1300,10 1600,-40" stroke="#8E7CC3" strokeWidth="10" fill="none" />
+        <svg className="w-full h-24 md:h-32" viewBox="0 0 1400 120" preserveAspectRatio="none">
+          {riverColors.map((color, i) => (
+            <path
+              key={`bot-a-${i}`}
+              d={`M -200 ${90 - i * 8} C 200 ${20 - i * 8}, 500 ${90 - i * 8}, 850 ${30 - i * 8} C 1100 ${10 - i * 8}, 1300 ${70 - i * 8}, 1600 ${20 - i * 8}`}
+              stroke={color}
+              strokeWidth="9"
+              strokeLinecap="round"
+              fill="none"
+            />
+          ))}
+
+          {riverColors.map((color, i) => (
+            <path
+              key={`bot-b-${i}`}
+              d={`M 1600 ${110 - i * 8} C 1300 ${30 - i * 8}, 900 ${100 - i * 8}, 550 ${20 - i * 8} C 300 ${70 - i * 8}, 100 ${10 - i * 8}, -200 ${50 - i * 8}`}
+              stroke={color}
+              strokeWidth="8"
+              opacity="0.85"
+              strokeLinecap="round"
+              fill="none"
+            />
+          ))}
         </svg>
       </div>
 

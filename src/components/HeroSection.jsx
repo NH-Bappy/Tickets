@@ -36,6 +36,9 @@ export default function HeroSection({ onOpenTickets }) {
     { top: '50%', left: '28%', size: 'text-xs', color: 'text-white/40', icon: '✧', delay: '1.3s' },
     { top: '48%', right: '22%', size: 'text-xs', color: 'text-[#F2C94C]/80', icon: '✦', delay: '0.6s' },
     { top: '58%', right: '6%', size: 'text-sm', color: 'text-white/60', icon: '✦', delay: '1.4s' },
+    { top: '65%', left: '18%', size: 'text-sm', color: 'text-white/50', icon: '✧', delay: '0.3s' },
+    { top: '70%', left: '4%', size: 'text-xs', color: 'text-[#E6914D]/80', icon: '✦', delay: '1s' },
+    { top: '68%', right: '15%', size: 'text-base', color: 'text-[#F2C94C]/70', icon: '★', delay: '0.9s' },
   ];
 
   return (
@@ -87,20 +90,7 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </motion.div>
 
-      {/* Top Right Cloud & Mountain */}
-      <motion.div 
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-4 right-4 z-10 hidden md:block pointer-events-none"
-      >
-        <svg width="110" height="75" viewBox="0 0 110 75" fill="none">
-          <path d="M10 45 Q30 15 55 30 Q80 10 100 45 Z" fill="#E6914D" opacity="0.8" />
-          <path d="M0 55 Q20 30 45 40 Q70 25 95 55 Z" fill="#FAF6EE" />
-          <polygon points="35,50 50,25 65,50" fill="#DE5B5B" stroke="#1e1e21" strokeWidth="2" />
-        </svg>
-      </motion.div>
-
-      {/* Rainbow Ribbon Stream exiting into Cream section top left */}
+      {/* 2D Rainbow Ribbon Stream */}
       <div className="absolute top-0 right-0 w-full h-[660px] pointer-events-none z-10 overflow-hidden">
         <svg className="w-full h-full" viewBox="0 0 1200 680" fill="none" preserveAspectRatio="none">
           {rainbowBands.map((band, i) => {
@@ -126,6 +116,22 @@ export default function HeroSection({ onOpenTickets }) {
         </svg>
       </div>
 
+      {/* Top Right Cloud & Mountain - PLACED AT Z-20 TO BE ABOVE THE RAINBOW STREAM */}
+      <motion.div 
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-8 right-2 z-20 hidden md:block pointer-events-none"
+      >
+        <svg width="130" height="90" viewBox="0 0 130 90" fill="none">
+          {/* Background Cloud */}
+          <path d="M10 55 Q35 20 65 38 Q95 15 120 55 Z" fill="#E6914D" opacity="0.9" />
+          <path d="M0 65 Q25 35 55 48 Q85 30 110 65 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2" />
+          {/* Mountain Peak sitting ON TOP of Rainbow */}
+          <polygon points="40,60 60,30 80,60" fill="#DE5B5B" stroke="#1e1e21" strokeWidth="2.5" />
+          <polygon points="60,30 68,44 60,42" fill="#FAF6EE" />
+        </svg>
+      </motion.div>
+
       {/* Main Centered Content */}
       <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center z-20 px-4">
         
@@ -147,7 +153,7 @@ export default function HeroSection({ onOpenTickets }) {
         <motion.div 
           animate={{ x: [0, 6, 0], y: [0, -6, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-2 md:left-8 top-56 z-10 hidden md:block"
+          className="absolute left-2 md:left-8 top-56 z-20 hidden md:block"
         >
           <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
             <path d="M35 10 C48 22 48 42 35 52 C22 42 22 22 35 10 Z" fill="#FAF6EE" stroke="#1e1e21" strokeWidth="2.5" />
@@ -162,7 +168,7 @@ export default function HeroSection({ onOpenTickets }) {
         <motion.div 
           animate={{ rotate: [-6, 6, -6] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-24 top-60 z-10 hidden md:block"
+          className="absolute right-24 top-60 z-20 hidden md:block"
         >
           <svg width="42" height="42" viewBox="0 0 42 42" fill="none">
             <circle cx="21" cy="23" r="16" fill="#E6914D" stroke="#1e1e21" strokeWidth="2" />
@@ -174,7 +180,7 @@ export default function HeroSection({ onOpenTickets }) {
         <motion.div 
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-44 top-96 z-10 hidden md:block"
+          className="absolute right-44 top-96 z-20 hidden md:block"
         >
           <svg width="35" height="25" viewBox="0 0 35 25" fill="none">
             <path d="M5 12 C10 2 28 2 32 12 C28 22 10 22 5 12 Z" fill="#DE5B5B" stroke="#1e1e21" strokeWidth="2" />
